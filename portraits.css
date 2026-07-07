@@ -34,12 +34,12 @@ margin-bottom:90px;
 }
 
 
-.logo{
-
-font-size:12px;
-
-letter-spacing:5px;
-
+.logo,
+.logo:visited,
+.logo:hover,
+.logo:active {
+    color: white;
+    text-decoration: none;
 }
 
 
