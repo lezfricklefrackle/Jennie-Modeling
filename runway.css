@@ -1,215 +1,245 @@
-/* ===========================
-   GENERAL
-=========================== */
-
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+
+margin:0;
+padding:0;
+box-sizing:border-box;
+
 }
 
 body{
-    background:#000;
-    color:#fff;
-    font-family:Helvetica, Arial, sans-serif;
+
+background:black;
+font-family:Arial,sans-serif;
+color:white;
+padding:40px;
+
 }
 
-a{
-    color:white;
-    text-decoration:none;
-}
 
 
-/* ===========================
-   HEADER
-=========================== */
+/* HEADER */
 
 header{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:30px 60px;
-    border-bottom:1px solid rgba(255,255,255,0.1);
+
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-bottom:90px;
+
 }
+
+
 
 .logo{
-    font-size:28px;
-    letter-spacing:4px;
-    font-weight:300;
+
+font-size:12px;
+letter-spacing:5px;
+
 }
+
+
+
+.logo a{
+
+color:white;
+text-decoration:none;
+
+}
+
+
+
+.logo a:visited{
+
+color:white;
+
+}
+
+
 
 nav{
-    display:flex;
-    gap:30px;
+
+display:flex;
+gap:28px;
+flex-wrap:wrap;
+
 }
+
+
 
 nav a{
-    font-size:14px;
-    letter-spacing:2px;
-    text-transform:uppercase;
-    transition:.3s;
-}
 
-nav a:hover,
-nav a.active{
-    opacity:.6;
-}
+color:white;
+text-decoration:none;
+font-size:11px;
+letter-spacing:2px;
+text-transform:uppercase;
+opacity:.7;
+transition:.3s;
 
-
-/* ===========================
-   MAIN
-=========================== */
-
-main{
-    max-width:1200px;
-    margin:auto;
-    padding:60px 30px 80px;
-}
-
-h1{
-    text-align:center;
-    font-size:38px;
-    font-weight:300;
-    letter-spacing:5px;
-    margin-bottom:20px;
-}
-
-.runway-description{
-    text-align:center;
-    color:#aaa;
-    font-size:15px;
-    letter-spacing:1px;
-    margin-bottom:60px;
 }
 
 
-/* ===========================
-   RUNWAY CONTENT
-=========================== */
 
-.runway-content{
-    width:100%;
+nav a:hover{
+
+opacity:1;
+
 }
 
 
-/* ===========================
-   VIDEOS
-=========================== */
 
-.runway-content video{
-    width:100%;
-    display:block;
-    margin:70px 0;
-    border-radius:4px;
+/* INTRO */
+
+.intro{
+
+text-align:center;
+margin-bottom:70px;
+
 }
 
 
-/* ===========================
-   GALLERY
-=========================== */
+
+.intro h1{
+
+font-size:72px;
+font-weight:300;
+letter-spacing:12px;
+margin-bottom:15px;
+
+}
+
+
+
+.intro p{
+
+font-size:11px;
+letter-spacing:4px;
+opacity:.6;
+text-transform:uppercase;
+
+}
+
+
+
+/* CONTENT */
 
 .gallery{
 
-    display:grid;
-
-    grid-template-columns:
-    repeat(auto-fit,minmax(280px,1fr));
-
-    gap:20px;
-
-    margin-bottom:60px;
-
-}
-
-.gallery img{
-
-    width:100%;
-    display:block;
-    object-fit:cover;
-
-    transition:.35s ease;
-
-}
-
-.gallery img:hover{
-
-    transform:scale(1.02);
+max-width:1200px;
+margin:auto;
 
 }
 
 
-/* ===========================
-   FOOTER (OPTIONAL)
-=========================== */
 
-footer{
+/* VIDEOS */
 
-    text-align:center;
+.video{
 
-    color:#777;
-
-    padding:60px 0 40px;
-
-    font-size:13px;
-
-    letter-spacing:2px;
+margin-bottom:70px;
 
 }
 
 
-/* ===========================
-   MOBILE
-=========================== */
+
+.video video{
+
+width:100%;
+display:block;
+border-radius:4px;
+box-shadow:0 0 30px rgba(255,255,255,.05);
+
+}
+
+
+
+/* PHOTO GRID */
+
+.photos{
+
+display:grid;
+
+grid-template-columns:repeat(2,1fr);
+
+gap:25px;
+
+margin-bottom:70px;
+
+}
+
+
+
+.photos img{
+
+width:100%;
+display:block;
+border-radius:4px;
+
+box-shadow:0 0 30px rgba(255,255,255,.05);
+
+transition:.35s;
+
+}
+
+
+
+.photos img:hover{
+
+transform:scale(1.01);
+
+}
+
+
+
+/* Center the last photo */
+
+.photos img:last-child{
+
+grid-column:1 / span 2;
+
+width:50%;
+
+justify-self:center;
+
+}
+
+
+
+/* MOBILE */
 
 @media(max-width:900px){
 
+body{
+
+padding:25px;
+
+}
+
 header{
 
-    flex-direction:column;
-
-    gap:25px;
-
-    padding:30px;
+flex-direction:column;
+gap:25px;
 
 }
 
-nav{
+.intro h1{
 
-    flex-wrap:wrap;
-
-    justify-content:center;
-
-    gap:18px;
+font-size:52px;
+letter-spacing:8px;
 
 }
 
-.logo{
+.photos{
 
-    font-size:24px;
-
-}
-
-h1{
-
-    font-size:30px;
+grid-template-columns:1fr;
 
 }
 
-main{
+.photos img:last-child{
 
-    padding:40px 20px 60px;
+grid-column:auto;
 
-}
-
-.runway-content video{
-
-    margin:50px 0;
-
-}
-
-.gallery{
-
-    grid-template-columns:1fr;
+width:100%;
 
 }
 
